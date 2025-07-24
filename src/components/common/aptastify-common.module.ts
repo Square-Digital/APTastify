@@ -6,6 +6,8 @@ import { LogoComponent } from './logo/logo.component';
 import { ButtonComponent } from './button/button.component';
 import { InstructionCardComponent } from './instruction-card/instruction-card.component';
 import { InstructionCardGridComponent } from './instruction-card-grid/instruction-card-grid.component';
+import { RecipeCardComponent } from './recipe-card/recipe-card.component';
+import { RecipeCardGridComponent } from './recipe-card-grid/recipe-card-grid.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { InstructionCardGridComponent } from './instruction-card-grid/instructio
     LogoComponent,
     ButtonComponent,
     InstructionCardComponent,
-    InstructionCardGridComponent
+    InstructionCardGridComponent,
+    RecipeCardComponent,
+    RecipeCardGridComponent
   ],
   imports: [
     CommonModule
@@ -25,7 +29,9 @@ import { InstructionCardGridComponent } from './instruction-card-grid/instructio
     LogoComponent,
     ButtonComponent,
     InstructionCardComponent,
-    InstructionCardGridComponent
+    InstructionCardGridComponent,
+    RecipeCardComponent,
+    RecipeCardGridComponent
   ]
 })
 export class AptastifyCommonModule { }

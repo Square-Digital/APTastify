@@ -2,6 +2,7 @@
   <div class="aptastify-instruction-card-grid__icon-img">
     <img [src]="featureImage()" />
   </div>
+  <div class="aptastify-instruction-card-grid__cards">
   @for (card of cards(); track $index) {
   <aptastify-instruction-card
     [image]="card.image"
@@ -9,4 +10,5 @@
     [content]="card.content"
   />
   }
+  </div>
 </div>

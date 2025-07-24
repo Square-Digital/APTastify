@@ -1,0 +1,18 @@
+  <div class="aptastify-recipe-card">
+    @if (recipe()) {
+      <div class="aptastify-recipe-card__image">
+        <img [src]="recipe()!.image" alt="recipe image" />
+      </div>
+      <div class="aptastify-recipe-card__content">
+      <div class="aptastify-recipe-card__content__title">
+        <h2>{{ recipe()!.title }}</h2>
+      </div>
+      <div class="aptastify-recipe-card__content__button">
+        <aptastify-button [text]="recipe()!.chef" [reverse]="true" />
+      </div>
+      <div class="aptastify-recipe-card__content__kpi">
+        <p>KPI: {{ recipe()!.kpi }} Orders</p>
+      </div>
+      </div>
+    }
+  </div>

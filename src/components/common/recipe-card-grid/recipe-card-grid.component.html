@@ -1,0 +1,15 @@
+<div class="aptastify-recipe-card-grid">
+  <div class="aptastify-recipe-card-grid__title-row">
+    <aptastify-button [text]="'View All Recipes'" [reverse]="true" />
+    <div class="aptastify-recipe-card-grid__title-row__title">
+      <h1>{{ title() }}</h1>
+    </div>
+  </div>
+  <div class="aptastify-recipe-card-grid__cards">
+
+    @for (recipe of recipes(); track recipe.title) {
+      <aptastify-recipe-card [recipe]="recipe" />
+    }
+  </div>
+</div>
+>
