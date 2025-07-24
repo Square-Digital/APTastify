@@ -9,8 +9,7 @@ import en from "../../../translations/en.json";
 export class HeroComponent {
 
   public tokens = en.tokens;
-  public separationBarText = en.tokens.pages.home.hero.separationBar;
-  public cta = en.tokens.pages.home.hero.cta;
+
 
   constructor() {}
 }

@@ -1,0 +1,15 @@
+.aptastify-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.background {
+  background-color: var(--enamel);
+  padding: 5px 10px;
+  border-radius: 10px;
+  opacity: 0.4;
+}

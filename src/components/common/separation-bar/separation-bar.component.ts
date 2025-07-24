@@ -8,5 +8,5 @@ import { Component, Input, input } from '@angular/core';
 })
 export class SeparationBarComponent {
 
-  @Input() text: string = "";
+  public text = input("");
 }

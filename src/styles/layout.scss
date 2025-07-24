@@ -1,0 +1,18 @@
+html {
+  margin: 0;
+  overflow-x: hidden;
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+
+$breakpoint-mobile: 768px;
+$breakpoint-tablet: 1024px;
+$breakpoint-desktop: 1200px;
+$breakpoint-large-desktop: 1440px;
+$breakpoint-xlarge-desktop: 1920px;
+$breakpoint-xxlarge-desktop: 2560px;
+$breakpoint-xxxlarge-desktop: 3840px;

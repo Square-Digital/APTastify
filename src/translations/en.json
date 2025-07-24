@@ -11,8 +11,12 @@
         "hero":{
           "title": "Discover the best recipes for your taste",
           "description": "Find the perfect recipe for any occasion.",
-          "separationBar": "Trusted By 1,000 of Global Teams",
-        "cta":"Join the global culinary revolution — where chefs, creators, and food lovers share, earn, and connect through inspiring recipes."
+          "separation-bar": "Trusted By 1,000 of Global Teams",
+          "button":{
+            "sample":"Get a Free Sample",
+            "contribute":"Join as a Contributor"
+          },
+          "cta":"Join the global culinary revolution — where chefs, creators, and food lovers share, earn, and connect through inspiring recipes."
         }
       }
     }

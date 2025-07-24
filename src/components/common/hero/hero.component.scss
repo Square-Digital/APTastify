@@ -1,94 +1,117 @@
+@import "../../../styles/layout.scss";
+
 .aptastify-hero {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  height: 40vh;
+  height: auto;
+  width: 100%;
+  padding-top: 100px;
   background-color: --white;
   color: black;
   text-align: center;
-  padding: 2rem;
+  padding-top: 100px;
   font-family: "circular-medium";
-}
 
-.aptastify-hero__content {
-  max-width: 1200px;
-  height: 100%;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.aptastify-hero__content__image {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  height: 100%;
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-.aptastify-hero__content-text {
-  flex: 1;
-  text-align: left;
-}
-
-.aptastify-hero__content-text-title {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-.aptastify-hero__content-text-description {
-  font-size: 1.25rem;
-  margin-bottom: 2rem;
-  opacity: 0.9;
-  line-height: 1.6;
-}
-
-.aptastify-hero-button {
-  background: #ffffff;
-  color: #667eea;
-  border: none;
-  padding: 1rem 2rem;
-  font-size: 1.1rem;
-  font-weight: 600;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  @media (max-width: $breakpoint-tablet) {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
-  &:active {
-    transform: translateY(0);
-  }
-}
+  &__content {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 2rem;
 
-@media (max-width: 768px) {
-  .aptastify-hero__content {
-    flex-direction: column;
-    text-align: center;
-  }
+    &__text {
+      text-align: left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 1rem;
+      width: auto;
+      height: 100%;
 
-  .aptastify-hero__content-text-title {
-    font-size: 2.5rem;
-  }
+      @media (max-width: $breakpoint-tablet) {
+        width: 100%;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
 
-  .aptastify-hero__content-text-description {
-    font-size: 1.1rem;
+      }
+
+      &__title {
+        font-size: 3.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+        width: 400px;
+      }
+
+      &__cta {
+        margin-bottom: 2rem;
+        line-height: 1.6;
+        font-weight: normal;
+        color: var(--grey);
+        font-family: "circular-book";
+        width: 400px;
+      }
+
+      &__buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+      }
+    }
+  }
+  .aptastify-hero__content__image {
+    @media (max-width: $breakpoint-tablet) {
+      display: none;
+    }
+    display: flex;
+    justify-content: center;
+    height: 700px;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 
   .aptastify-hero-button {
-    padding: 0.875rem 1.75rem;
-    font-size: 1rem;
+    background: #ffffff;
+    color: #667eea;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    .aptastify-hero__content {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+    }
   }
 }

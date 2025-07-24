@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import en from "../../translations/en.json";
 @Component({
   selector: 'app-home',
   standalone: false,
@@ -8,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  public tokens = en.tokens;
 }

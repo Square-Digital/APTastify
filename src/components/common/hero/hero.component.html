@@ -1,16 +1,20 @@
 <div class="aptastify-hero">
   <div class="aptastify-hero__content">
-    <div class="aptastify-hero__content-text">
-      <h1 class="aptastify-hero__content-text-title">
+    <div class="aptastify-hero__content__text">
+      <aptastify-logo />
+      <h1 class="aptastify-hero__content__text__title">
         {{ tokens.components.hero.title }}
       </h1>
-      <p class="aptastify-hero__content-text-description">
-        {{ cta }}
+      <p class="aptastify-hero__content__text__cta">
+        {{tokens.pages.home.hero.cta}}
       </p>
+      <div class="aptastify-hero__content__text__buttons">
+        <aptastify-button [text]="tokens.pages.home.hero.button.sample" />
+        <aptastify-button [text]="tokens.pages.home.hero.button.contribute" [reverse]="true" />
+      </div>
     </div>
     <div class="aptastify-hero__content__image">
       <img src="/assets/images/phone-img.png" alt="Hero Image" />
     </div>
   </div>
-  <aptastify-separation-bar [text]="separationBarText" />
 </div>
