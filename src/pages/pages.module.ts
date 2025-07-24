@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { PagesRoutingModule } from './pages-routing.module';
-import { AptastifyCommonModule } from '../components/common/tastify-common.module';
+import { AptastifyCommonModule } from '../components/common/aptastify-common.module';
 
 @NgModule({
   declarations: [

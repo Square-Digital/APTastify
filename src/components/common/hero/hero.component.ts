@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import en from "../../../translations/en.json";
 @Component({
   selector: 'aptastify-hero',
   templateUrl: './hero.component.html',
@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   standalone: false
 })
 export class HeroComponent {
-  // Hero component logic will go here
+
+  public tokens = en.tokens;
+  public separationBarText = en.tokens.pages.home.hero.separationBar;
+  public cta = en.tokens.pages.home.hero.cta;
+
+  constructor() {}
 }

@@ -2,15 +2,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 60vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  flex-direction: column;
+  height: 40vh;
+  background-color: --white;
+  color: black;
   text-align: center;
   padding: 2rem;
+  font-family: "circular-medium";
 }
 
 .aptastify-hero__content {
   max-width: 1200px;
+  height: 100%;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -21,12 +24,11 @@
   flex: 1;
   display: flex;
   justify-content: center;
+  height: 100%;
 
   img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
   }
 }
 

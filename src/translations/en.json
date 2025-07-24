@@ -1,0 +1,20 @@
+{
+  "tokens":{
+    "components":{
+      "hero":{
+        "title": "Made by The People For The People",
+        "description": "Find the perfect recipe for any occasion."
+      }
+    },
+    "pages":{
+      "home":{
+        "hero":{
+          "title": "Discover the best recipes for your taste",
+          "description": "Find the perfect recipe for any occasion.",
+          "separationBar": "Trusted By 1,000 of Global Teams",
+        "cta":"Join the global culinary revolution — where chefs, creators, and food lovers share, earn, and connect through inspiring recipes."
+        }
+      }
+    }
+  }
+}

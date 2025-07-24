@@ -2,14 +2,15 @@
   <div class="aptastify-hero__content">
     <div class="aptastify-hero__content-text">
       <h1 class="aptastify-hero__content-text-title">
-        Discover the best recipes for your taste
+        {{ tokens.components.hero.title }}
       </h1>
       <p class="aptastify-hero__content-text-description">
-        Find the perfect recipe for any occasion.
+        {{ cta }}
       </p>
     </div>
     <div class="aptastify-hero__content__image">
       <img src="/assets/images/phone-img.png" alt="Hero Image" />
     </div>
   </div>
+  <aptastify-separation-bar [text]="separationBarText" />
 </div>
