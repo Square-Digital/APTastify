@@ -1,1 +1,12 @@
-<p>instruction-card-grid works!</p>
+<div class="aptastify-instruction-card-grid">
+  <div class="aptastify-instruction-card-grid__icon-img">
+    <img [src]="featureImage()" />
+  </div>
+  @for (card of cards(); track $index) {
+  <aptastify-instruction-card
+    [image]="card.image"
+    [title]="card.title"
+    [content]="card.content"
+  />
+  }
+</div>
