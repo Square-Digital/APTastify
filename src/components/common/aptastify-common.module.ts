@@ -8,6 +8,9 @@ import { InstructionCardComponent } from './instruction-card/instruction-card.co
 import { InstructionCardGridComponent } from './instruction-card-grid/instruction-card-grid.component';
 import { RecipeCardComponent } from './recipe-card/recipe-card.component';
 import { RecipeCardGridComponent } from './recipe-card-grid/recipe-card-grid.component';
+import { ProductCardGridComponent } from './product-card-grid/product-card-grid.component';
+import { ProductCardComponent } from './product-card/product-card.component';
+import { RichTextComponent } from './rich-text/rich-text.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { RecipeCardGridComponent } from './recipe-card-grid/recipe-card-grid.com
     InstructionCardComponent,
     InstructionCardGridComponent,
     RecipeCardComponent,
-    RecipeCardGridComponent
+    RecipeCardGridComponent,
+    ProductCardGridComponent,
+    ProductCardComponent,
+    RichTextComponent
   ],
   imports: [
     CommonModule
@@ -31,7 +37,10 @@ import { RecipeCardGridComponent } from './recipe-card-grid/recipe-card-grid.com
     InstructionCardComponent,
     InstructionCardGridComponent,
     RecipeCardComponent,
-    RecipeCardGridComponent
+    RecipeCardGridComponent,
+    ProductCardGridComponent,
+    ProductCardComponent,
+    RichTextComponent
   ]
 })
 export class AptastifyCommonModule { }

@@ -1,0 +1,25 @@
+<div class="aptastify-product-card-grid">
+  <div class="aptastify-product-card-grid__content">
+    <div class="aptastify-product-card-grid__content__top">
+      <div class="aptastify-product-card-grid__content__top__text">
+        <div class="aptastify-product-card-grid__content__top__text__title-row">
+          <h1>{{ title() }}</h1>
+        </div>
+        <div
+          class="aptastify-product-card-grid__content__top__text__description"
+        >
+          <p>{{ description() }}</p>
+        </div>
+      </div>
+      <div class="aptastify-product-card-grid__content__top__image">
+        <img src="assets/images/arrow-top.png" alt="product-card-grid-image" />
+      </div>
+    </div>
+
+    <div class="aptastify-product-card-grid__content__cards">
+      @for (product of products(); track product.title) {
+      <aptastify-product-card [product]="product" />
+      }
+    </div>
+  </div>
+</div>

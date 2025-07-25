@@ -1,0 +1,19 @@
+<div class="aptastify-rich-text">
+  <div class="aptastify-rich-text__left">
+    <div class="aptastify-rich-text__left__image">
+      <img src="assets/images/arrow-side.png" alt="rich-text-image" />
+    </div>
+  </div>
+  <div class="aptastify-rich-text__right">
+    <h1 class="aptastify-rich-text__right__title">{{ title() }}</h1>
+    <div class="aptastify-rich-text__right__description-container">
+      <p class="aptastify-rich-text__right__description-container__description">
+        {{ description() }}
+      </p>
+      <p class="aptastify-rich-text__right__description-container__cta">
+        {{ cta() }}
+      </p>
+    </div>
+    <aptastify-button [text]="'Learn How You Earn'" [reverse]="true" />
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="aptastify-product-card">
+  <div class="aptastify-product-card__image">
+    <img [src]="product()?.image" alt="product-card-image" />
+  </div>
+  <div class="aptastify-product-card__text">
+    <h1 class="aptastify-product-card__text__brand">{{ product()?.brand }}</h1>
+    <h1 class="aptastify-product-card__text__title">{{ product()?.title }}</h1>
+  </div>
+  <div>
+    <aptastify-button [text]="product()?.cta || 'Learn More'" [reverse]="true" />
+  </div>
+</div>

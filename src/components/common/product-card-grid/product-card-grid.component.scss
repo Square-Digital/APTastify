@@ -1,0 +1,79 @@
+@import "../../../styles/index.scss";
+
+.aptastify-product-card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 0px 50px;
+  margin-bottom: 100px;
+  justify-content: center;
+  font-family: "circular-bold";
+  background: linear-gradient(to top, white 50%, var(--primary) 50%);
+  position: relative;
+  width: 100%;
+  min-height: 65vh;
+  align-items: center;
+  
+      &__content {
+      display: flex;
+      flex-direction: column;
+      padding: 0px 50px;
+      width: 75%;
+      margin-bottom: 100px;
+      justify-content: center;
+      position: relative;
+      padding-top: 100px;
+      z-index: 1;
+
+    &__top {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+
+      &__text {
+      //  border:solid red;
+        width: 75%;
+        &__title-row {
+          display: flex;
+          flex-direction: row;
+          color: var(--white);
+          font-family: "circular-book";
+          font-size: 1.5rem;
+        }
+        &__description {
+          color: var(--white);
+          font-family: "circular-book";
+          font-size: 1rem;
+        }
+      }
+      margin-bottom: 50px;
+
+      &__image {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        transform: translate(0px, 25px);
+        z-index: 1;
+        img {
+          width: 40%;
+          height: 80%;
+          object-fit: contain;
+        }
+      }
+    }
+
+
+
+    &__cards {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    margin-bottom: 100px;
+
+  }
+}

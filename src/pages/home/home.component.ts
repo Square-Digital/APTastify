@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import en from '../../translations/en.json';
 import { InstructionCard } from '../../interfaces/instructionCard';
 import { RecipeCard } from '../../interfaces/recipeCard';
+import { ProductCard } from '../../interfaces/productCard';
 @Component({
   selector: 'app-home',
   standalone: false,
@@ -31,24 +32,44 @@ export class HomeComponent {
     },
   ];
   public recipes: RecipeCard[] = [
-      {
-        title: 'Authentic Thai Green Curry',
-        chef: 'Chef Ron',
-        image: 'assets/images/green-curry.png',
-        kpi: '100',
-      },
-      {
-        title: 'Homemade Tomato Sauce',
-        chef: 'Chef Ron',
-        image: 'assets/images/tomato-sauce.png',
-        kpi: '100',
-      },
-      {
-        title: 'Spicy Korean Kimchi',
-        chef: 'Chef Ron',
-        image: 'assets/images/kimchi.png',
-        kpi: '100',
-      },
+    {
+      title: 'Authentic Thai Green Curry',
+      chef: 'Chef Ron',
+      image: 'assets/images/green-curry.png',
+      kpi: '100',
+    },
+    {
+      title: 'Homemade Tomato Sauce',
+      chef: 'Chef Ron',
+      image: 'assets/images/tomato-sauce.png',
+      kpi: '100',
+    },
+    {
+      title: 'Spicy Korean Kimchi',
+      chef: 'Chef Ron',
+      image: 'assets/images/kimchi.png',
+      kpi: '100',
+    },
+  ];
 
+  public products: ProductCard[] = [
+    {
+      brand: 'SWTM',
+      title: 'Mango Paste',
+      image: 'assets/images/products/mango-paste.png',
+      cta: 'Get a Free Sample',
+    },
+    {
+      brand: 'SWTM',
+      title: 'Pineapple Paste',
+      image: 'assets/images/products/mango-paste.png',
+      cta: 'Get a Free Sample',
+    },
+    {
+      brand: 'SWTM',
+      title: 'Mango Paste',
+      image: 'assets/images/products/mango-paste.png',
+      cta: 'Get a Free Sample',
+    },
   ];
 }
