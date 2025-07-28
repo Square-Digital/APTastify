@@ -16,3 +16,14 @@ $breakpoint-large-desktop: 1440px;
 $breakpoint-xlarge-desktop: 1920px;
 $breakpoint-xxlarge-desktop: 2560px;
 $breakpoint-xxxlarge-desktop: 3840px;
+
+:root {
+  --mobile: #{$breakpoint-mobile};
+  --tablet: #{$breakpoint-tablet};
+  --desktop: #{$breakpoint-desktop};
+  --large-desktop: #{$breakpoint-large-desktop};
+  --xlarge-desktop: #{$breakpoint-xlarge-desktop};
+  --xxlarge-desktop: #{$breakpoint-xxlarge-desktop};
+  --xxxlarge-desktop: #{$breakpoint-xxxlarge-desktop};
+}
+

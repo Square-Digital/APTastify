@@ -1,0 +1,77 @@
+.aptastify-footer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 2rem;
+  background-color: var(--primary);
+  padding: 5rem;
+  font-family: "circular-book";
+  color: var(--white);
+  height: 350px;
+
+  &__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+    //padding: 2rem;
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 2rem;
+    height: 100%;
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 1rem;
+      min-height: 200px;
+
+      &__social-icon-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        width: 100%;
+
+        &__icon {
+          width: 50px;
+          height: 50px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+
+    a {
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 200;
+      font-family: "circular-book";
+    }
+    a:hover {
+      color: var(--secondary);
+    }
+  }
+}

@@ -6,6 +6,7 @@ import { ProductCard } from '../../interfaces/productCard';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Input } from '../../interfaces/input';
 import { Button } from '../../interfaces/button';
+import { InfoCard } from '../../interfaces/infoCard';
 @Component({
   selector: 'app-home',
   standalone: false,
@@ -99,10 +100,24 @@ export class HomeComponent {
       reverse: false,
       icon: 'assets/images/icons/bell.png',
       iconPosition: 'left',
-      color: 'var(--secondary)'
+      color: 'var(--secondary)',
     },
   ];
 
+  public infoCards: InfoCard[] = [
+    {
+      description:
+        'I loved this app and this lorem ipsum text can be used to type anything over here so you can promote your app nicely.',
+      jobTitle: 'Founder',
+      name: 'John Doe',
+    },
+    {
+      description:
+        'I loved this app and this lorem ipsum text can be used to type anything over here so you can promote your app nicely.',
+      jobTitle: 'Chef',
+      name: 'John Doe',
+    },
+  ];
   public onFormSubmit(event: any): void {
     console.log(event);
   }

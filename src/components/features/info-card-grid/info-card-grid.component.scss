@@ -1,0 +1,40 @@
+@import "../../../styles/index.scss";
+
+.aptastify-info-card-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: var(--enamel);
+  font-family: "circular-bold";
+  padding: 8rem 0;
+
+  &__title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--secondary);
+
+    h2 {
+      margin: 0;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-family: "circular-book";
+
+    @media (max-width: $breakpoint-tablet) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

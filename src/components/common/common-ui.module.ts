@@ -11,6 +11,8 @@ import { RecipeCardGridComponent } from './recipe-card-grid/recipe-card-grid.com
 import { ProductCardGridComponent } from './product-card-grid/product-card-grid.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { RichTextComponent } from './rich-text/rich-text.component';
+import { InfoCardComponent } from './info-card/info-card.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { RichTextComponent } from './rich-text/rich-text.component';
     ProductCardGridComponent,
     ProductCardComponent,
     RichTextComponent,
+    InfoCardComponent,
+    FooterComponent,
   ],
   imports: [
     CommonModule,
@@ -41,6 +45,8 @@ import { RichTextComponent } from './rich-text/rich-text.component';
     ProductCardGridComponent,
     ProductCardComponent,
     RichTextComponent,
+    InfoCardComponent,
+    FooterComponent,
   ]
 })
 export class CommonUiModule { }
