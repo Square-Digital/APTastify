@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeroComponent } from './hero/hero.component';
 import { SeparationBarComponent } from './separation-bar/separation-bar.component';
 import { LogoComponent } from './logo/logo.component';
 import { ButtonComponent } from './button/button.component';
@@ -16,7 +15,6 @@ import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
-    HeroComponent,
     SeparationBarComponent,
     LogoComponent,
     ButtonComponent,
@@ -34,7 +32,6 @@ import { FooterComponent } from './footer/footer.component';
     CommonModule,
   ],
   exports: [
-    HeroComponent,
     SeparationBarComponent,
     LogoComponent,
     ButtonComponent,

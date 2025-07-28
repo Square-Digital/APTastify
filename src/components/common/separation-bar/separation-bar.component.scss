@@ -3,7 +3,8 @@
 .aptastify-separation-bar {
   display: flex;
   width: 100vw;
-  min-height: 100px;
+  //min-height: 100px;
+  height: 5vh;
   background-color: var(--primary);
   justify-content: center;
   align-items: center;

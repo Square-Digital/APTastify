@@ -5,6 +5,7 @@ import { CommonUiModule } from '../common/common-ui.module';
 import { FormsModule } from '../forms/forms.module';
 import { InfoCardGridComponent } from './info-card-grid/info-card-grid.component';
 import { NearMeMapComponent } from './near-me-map/near-me-map.component';
+import { HeroComponent } from './hero/hero.component';
 
 
 
@@ -13,6 +14,7 @@ import { NearMeMapComponent } from './near-me-map/near-me-map.component';
     EmailSignupComponent,
     InfoCardGridComponent,
     NearMeMapComponent,
+    HeroComponent
   ],
   imports: [
     CommonModule,
@@ -23,6 +25,7 @@ import { NearMeMapComponent } from './near-me-map/near-me-map.component';
     EmailSignupComponent,
     InfoCardGridComponent,
     NearMeMapComponent,
+    HeroComponent
   ]
 
 })
