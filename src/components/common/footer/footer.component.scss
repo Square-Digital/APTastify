@@ -43,6 +43,8 @@
       justify-content: flex-start;
       padding: 1rem;
       min-height: 200px;
+      position: relative;
+      top:20px;
 
       &__social-icon-container {
         display: flex;
