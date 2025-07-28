@@ -1,3 +1,22 @@
 <div class="aptastify-button">
-  <button class="aptastify-button__button" [class.reverse]="reverse()" (click)="handleClick()">{{ text() }}</button>
+  <button
+    class="aptastify-button__button"
+    [class.reverse]="reverse()"
+    [class.has-icon]="icon()"
+    [class.icon-left]="icon() && iconPosition() === 'left'"
+    [class.icon-right]="icon() && iconPosition() === 'right'"
+    (click)="handleClick()"
+  >
+    @if (icon() && iconPosition() === 'left') {
+      <div class="aptastify-button__icon">
+        <img [src]="icon()" [alt]="'Button icon'" />
+      </div>
+    }
+    <span class="aptastify-button__text">{{ text() }}</span>
+    @if (icon() && iconPosition() === 'right') {
+      <div class="aptastify-button__icon">
+        <img [src]="icon()" [alt]="'Button icon'" />
+      </div>
+    }
+  </button>
 </div>

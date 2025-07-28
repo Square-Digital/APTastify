@@ -12,6 +12,8 @@ export class ButtonComponent {
   public reverse = input(false);
   public type = input('submit');
   public disabled = input(false);
+  public icon = input<string>(''); // ← Add this
+  public iconPosition = input<'left' | 'right'>('left'); // ← Add this for icon placement
   public clickHandler = input<() => void>(() => {});
 
   // Output event that parent components can listen to

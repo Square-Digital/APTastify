@@ -97,6 +97,8 @@ export class HomeComponent {
       type: 'submit',
       disabled: false,
       reverse: false,
+      icon: 'assets/images/icons/bell.png',
+      iconPosition: 'left' 
     },
   ];
 

@@ -4,4 +4,6 @@ export interface Button {
   type?: string;
   disabled?: boolean;
   reverse?: boolean;
+  icon?: string; // ← Add this
+  iconPosition?: 'left' | 'right'; // ← Add this
 }
