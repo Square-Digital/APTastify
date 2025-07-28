@@ -98,7 +98,8 @@ export class HomeComponent {
       disabled: false,
       reverse: false,
       icon: 'assets/images/icons/bell.png',
-      iconPosition: 'left' 
+      iconPosition: 'left',
+      color: 'var(--secondary)'
     },
   ];
 

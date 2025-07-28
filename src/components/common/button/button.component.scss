@@ -13,22 +13,22 @@
     padding: 18px 40px;
     border-radius: 42px;
     transition: all 0.3s ease;
-    display: flex; // ← Add this
-    align-items: center; // ← Add this
-    justify-content: center; // ← Add this
-    gap: 0.5rem; // ← Add this for spacing between icon and text
-    min-width: fit-content; // ← Add this to prevent shrinking
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-width: fit-content;
 
     &.has-icon {
-      padding: 18px 30px; // ← Slightly reduce padding when icon is present
+      padding: 18px 30px;
     }
 
     &.icon-left {
-      flex-direction: row; // ← Icon on left, text on right
+      flex-direction: row;
     }
 
     &.icon-right {
-      flex-direction: row-reverse; // ← Text on left, icon on right
+      flex-direction: row-reverse;
     }
   }
 
@@ -43,7 +43,6 @@
       width: 100%;
       height: 100%;
       object-fit: contain;
-      filter: brightness(0) invert(1); // ← Makes any color white
     }
   }
 

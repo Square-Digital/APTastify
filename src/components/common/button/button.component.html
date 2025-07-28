@@ -5,6 +5,7 @@
     [class.has-icon]="icon()"
     [class.icon-left]="icon() && iconPosition() === 'left'"
     [class.icon-right]="icon() && iconPosition() === 'right'"
+    [style.background-color]="color()"
     (click)="handleClick()"
   >
     @if (icon() && iconPosition() === 'left') {

@@ -15,7 +15,7 @@ export class ButtonComponent {
   public icon = input<string>(''); // ← Add this
   public iconPosition = input<'left' | 'right'>('left'); // ← Add this for icon placement
   public clickHandler = input<() => void>(() => {});
-
+  public color = input<string>('');
   // Output event that parent components can listen to
   public onClick = output<void>();
 
