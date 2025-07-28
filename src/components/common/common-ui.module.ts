@@ -24,10 +24,10 @@ import { RichTextComponent } from './rich-text/rich-text.component';
     RecipeCardGridComponent,
     ProductCardGridComponent,
     ProductCardComponent,
-    RichTextComponent
+    RichTextComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
     HeroComponent,
@@ -40,7 +40,7 @@ import { RichTextComponent } from './rich-text/rich-text.component';
     RecipeCardGridComponent,
     ProductCardGridComponent,
     ProductCardComponent,
-    RichTextComponent
+    RichTextComponent,
   ]
 })
-export class AptastifyCommonModule { }
+export class CommonUiModule { }

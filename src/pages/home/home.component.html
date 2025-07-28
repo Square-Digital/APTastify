@@ -1,8 +1,24 @@
 <div class="aptastify-home">
   <aptastify-hero></aptastify-hero>
   <aptastify-separation-bar [text]="tokens.pages.home.hero['separation-bar']" />
-  <aptastify-instruction-card-grid [cards]="cards" [featureImage]="featureImage" />
+  <aptastify-instruction-card-grid
+    [cards]="cards"
+    [featureImage]="featureImage"
+  />
   <aptastify-recipe-card-grid [recipes]="recipes" />
   <aptastify-product-card-grid [products]="products" />
   <aptastify-rich-text />
+  <aptastify-email-signup
+    [title]="'Coming Soon:'"
+    [subtitle]="'APTastify App'"
+    [description]="
+      'Track orders, upload recipes, and manage referrals—all from your phone. Plus, get fresh recipes,platform updates, and exclusive paste drops delivered straight to your inbox.'
+    "
+    [backgroundImage]="'/assets/images/group.png'"
+    [formGroup]="formGroup"
+    [inputs]="inputs"
+    [primaryButtonText]="'Get Started'"
+    [buttons]="buttons"
+    (formSubmit)="onFormSubmit($event)"
+  />
 </div>

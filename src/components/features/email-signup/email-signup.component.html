@@ -1,0 +1,33 @@
+<!-- src/components/features/email-signup/email-signup.component.html -->
+<div
+  class="aptastify-email-signup"
+  [style.background-image]="'url(' + backgroundImage() + ')'"
+>
+  <div class="aptastify-email-signup__overlay">
+    <div class="aptastify-email-signup__content">
+      <div class="aptastify-email-signup__title-container">
+        <h2 class="aptastify-email-signup__title-container__title">
+          {{ title() }}
+        </h2>
+        <h2 class="aptastify-email-signup__title-container__subtitle">
+          {{ subtitle() }}
+        </h2>
+      </div>
+      <p class="aptastify-email-signup__description">
+        {{ description() }}
+      </p>
+      <div class="aptastify-email-signup__actions">
+        <aptastify-form
+          [formGroup]="formGroup()"
+          [inputs]="inputs()"
+          
+          [submitText]="primaryButtonText()"
+          (formSubmit)="onPrimaryClick()"
+          [buttons]="buttons()"
+          [direction]="direction()"
+          [gap]="'2rem'"
+        ></aptastify-form>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<form
+  class="aptastify-form"
+  [formGroup]="formGroup()!"
+  (ngSubmit)="onSubmit($event)"
+  [style.flex-direction]="direction()"
+  [style.gap]="gap()"
+>
+  @for (input of inputs(); track input.label) {
+  <aptastify-input
+    [label]="input.label ?? ''"
+    [placeholder]="input.placeholder"
+    [type]="input.type"
+    [required]="input.required"
+    [disabled]="input.disabled"
+    [value]="input.value"
+    [icon]="input.icon ?? ''"
+  />
+  }
+
+  <div class="aptastify-form__actions">
+    @for (button of buttons(); track button.text) {
+    <aptastify-button
+      [text]="button.text"
+      (onClick)="button.handler()"
+      [type]="button.type ?? 'submit'"
+      [disabled]="button.disabled ?? false"
+      [reverse]="button.reverse ?? false"
+    />
+    }
+  </div>
+</form>

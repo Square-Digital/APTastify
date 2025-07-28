@@ -1,0 +1,12 @@
+.aptastify-form {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+
+  &__actions {
+    display: flex;
+  }
+}

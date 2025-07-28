@@ -1,5 +1,4 @@
 .aptastify-button {
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,12 +10,12 @@
     background-color: var(--primary);
     color: var(--white);
     border: none;
-    padding: 25px 40px;
+    padding: 18px 40px;
     border-radius: 42px;
     transition: all 0.3s ease;
   }
 
-  .reverse{
+  .reverse {
     background-color: var(--enamel);
     color: var(--primary);
     //border: 1px solid var(--primary);

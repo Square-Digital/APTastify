@@ -1,0 +1,29 @@
+<div class="aptastify-input">
+  @if (label()) {
+    <label class="aptastify-input__label" [for]="'input-'">
+      {{ label() }}
+      @if (required()) {
+        <span class="aptastify-input__required">*</span>
+      }
+    </label>
+  }
+  <div class="aptastify-input__field-container">
+    @if (icon()) {
+      <div class="aptastify-input__field-container__icon">
+        <img [src]="icon()" [alt]="'Input icon'" />
+      </div>
+    }
+    <input
+      class="aptastify-input__field-container__field"
+      [class.has-icon]="icon()"
+      [type]="type()"
+      [placeholder]="placeholder()"
+      [value]="value()"
+      [required]="required()"
+      [disabled]="disabled()"
+      (input)="onInput($event)"
+      (focus)="onFocus()"
+      (blur)="onBlur()"
+    />
+  </div>
+</div>

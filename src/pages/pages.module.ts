@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { PagesRoutingModule } from './pages-routing.module';
-import { AptastifyCommonModule } from '../components/common/aptastify-common.module';
+import { CommonUiModule } from '../components/common/common-ui.module';
+import { FormsModule } from '../components/forms/forms.module';
+import { FeaturesModule } from '../components/features/features.module';
 
 @NgModule({
   declarations: [
@@ -10,8 +12,10 @@ import { AptastifyCommonModule } from '../components/common/aptastify-common.mod
   ],
   imports: [
     CommonModule,
+    CommonUiModule,
+    FormsModule,
     PagesRoutingModule,
-    AptastifyCommonModule
+    FeaturesModule
   ]
 })
 export class PagesModule { }

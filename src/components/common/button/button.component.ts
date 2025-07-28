@@ -10,6 +10,8 @@ import { Component, input, output } from '@angular/core';
 export class ButtonComponent {
   public text = input("submit");
   public reverse = input(false);
+  public type = input('submit');
+  public disabled = input(false);
   public clickHandler = input<() => void>(() => {});
 
   // Output event that parent components can listen to

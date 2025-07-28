@@ -3,6 +3,9 @@ import en from '../../translations/en.json';
 import { InstructionCard } from '../../interfaces/instructionCard';
 import { RecipeCard } from '../../interfaces/recipeCard';
 import { ProductCard } from '../../interfaces/productCard';
+import { FormControl, FormGroup } from '@angular/forms';
+import { Input } from '../../interfaces/input';
+import { Button } from '../../interfaces/button';
 @Component({
   selector: 'app-home',
   standalone: false,
@@ -72,4 +75,32 @@ export class HomeComponent {
       cta: 'Get a Free Sample',
     },
   ];
+  public formGroup = new FormGroup({
+    email: new FormControl(''),
+    password: new FormControl(''),
+  });
+  public inputs: Input[] = [
+    {
+      placeholder: 'Your E-Mail Address',
+      type: 'text',
+      required: true,
+      disabled: false,
+      value: '',
+      icon: 'assets/images/icons/mail.png',
+    },
+  ];
+
+  public buttons: Button[] = [
+    {
+      text: 'Sign Up',
+      handler: () => {},
+      type: 'submit',
+      disabled: false,
+      reverse: false,
+    },
+  ];
+
+  public onFormSubmit(event: any): void {
+    console.log(event);
+  }
 }
