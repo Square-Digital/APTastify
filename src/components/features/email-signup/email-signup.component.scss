@@ -11,6 +11,14 @@
   align-items: center;
   justify-content: center;
 
+  @media (max-width: $breakpoint-tablet) {
+    min-height: 400px;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    min-height: 350px;
+  }
+
   &__overlay {
     position: absolute;
     top: 0;
@@ -32,8 +40,12 @@
     padding: 2rem;
 
     @media (max-width: $breakpoint-tablet) {
-      padding: 1rem;
+      padding: 1.5rem;
       max-width: 100%;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
+      padding: 1rem;
     }
   }
 
@@ -42,6 +54,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 1rem;
+
+    @media (max-width: $breakpoint-mobile) {
+      margin-bottom: 0.75rem;
+    }
 
     &__title {
       font-family: "circular-bold";
@@ -50,11 +67,11 @@
       margin: 0;
 
       @media (max-width: $breakpoint-tablet) {
-        font-size: 2rem;
+        font-size: 2.5rem;
       }
 
       @media (max-width: $breakpoint-mobile) {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
     }
 
@@ -64,6 +81,16 @@
       margin: 0;
       margin-bottom: 2rem;
       line-height: 1.5;
+
+      @media (max-width: $breakpoint-tablet) {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      @media (max-width: $breakpoint-mobile) {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
     }
   }
 
@@ -75,7 +102,13 @@
     opacity: 0.9;
 
     @media (max-width: $breakpoint-tablet) {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    @media (max-width: $breakpoint-mobile) {
       font-size: 1rem;
+      margin-bottom: 1rem;
     }
   }
 
@@ -85,9 +118,15 @@
     justify-content: center;
     flex-wrap: wrap;
     width: 100%;
+
+    @media (max-width: $breakpoint-tablet) {
+      gap: 0.75rem;
+    }
+
     @media (max-width: $breakpoint-mobile) {
       flex-direction: column;
       align-items: center;
+      gap: 0.5rem;
     }
   }
 }

@@ -4,7 +4,7 @@
   display: flex;
   width: 100vw;
   //min-height: 100px;
-  height: 5vh;
+  height: auto;
   background-color: var(--primary);
   justify-content: center;
   align-items: center;
@@ -23,7 +23,7 @@
     display: flex;
     width: 85%;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     text-align: left;
     flex-direction: row;
     height: 100%;

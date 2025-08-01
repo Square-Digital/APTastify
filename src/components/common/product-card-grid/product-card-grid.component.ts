@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, input, ViewChild, ViewChildren } from '@angular/core';
 import { ProductCard } from '../../../interfaces/productCard';
 
 @Component({
@@ -9,7 +9,11 @@ import { ProductCard } from '../../../interfaces/productCard';
 })
 export class ProductCardGridComponent {
 
+  @ViewChild("arrow") arrowImage!: ElementRef<HTMLElement>;
+
+
   public products = input<ProductCard[]>([]);
   public title = input<string>('Free Paste Sample With Sign Up');
   public description = input<string>("Join the global culinary revolution — where chefs, creators, and food lovers share, earn, and connect through inspiring recipes.");
+
 }
