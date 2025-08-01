@@ -6,7 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "start:dev": "API_BASE_URL=http://localhost:5116 ng serve --configuration=development",
+    "start:prod": "API_BASE_URL=https://api.yourapp.com ng serve --configuration=production"
   },
   "private": true,
   "dependencies": {

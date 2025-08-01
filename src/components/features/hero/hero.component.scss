@@ -1,4 +1,4 @@
-@import "../../../styles/layout.scss";
+@use "../../../styles/index.scss" as *;
 
 .aptastify-hero {
   display: flex;
@@ -43,7 +43,6 @@
         text-align: center;
         align-items: center;
         justify-content: center;
-
       }
 
       &__title {
@@ -71,12 +70,13 @@
     }
   }
   .aptastify-hero__content__image {
-    @media (max-width: $breakpoint-tablet) {
-      display: none;
-    }
     display: flex;
     justify-content: center;
     height: 775px;
+
+    @media (max-width: $breakpoint-tablet) {
+      display: none;
+    }
 
     img {
       max-width: 100%;

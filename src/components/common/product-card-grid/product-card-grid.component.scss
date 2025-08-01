@@ -1,4 +1,4 @@
-@import "../../../styles/index.scss";
+@use "../../../styles/index.scss" as *;
 
 .aptastify-product-card-grid {
   display: flex;
@@ -171,15 +171,13 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
       width: 100%;
+      margin-bottom: 100px;
 
       @media (max-width: $breakpoint-tablet) {
         padding-top: 0px;
         gap: 5rem;
-
         grid-template-columns: repeat(1, 1fr);
       }
     }
-
-    margin-bottom: 100px;
   }
 }
