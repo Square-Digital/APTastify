@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import en from '../../translations/en.json';
 import { InstructionCard } from '../../interfaces/instructionCard';
 import { RecipeCard } from '../../interfaces/recipeCard';
@@ -7,6 +7,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 import { Input } from '../../interfaces/input';
 import { Button } from '../../interfaces/button';
 import { InfoCard } from '../../interfaces/infoCard';
+import { UserApiService } from '../../services/api/user/user-api.service';
 @Component({
   selector: 'app-home',
   standalone: false,
@@ -14,8 +15,11 @@ import { InfoCard } from '../../interfaces/infoCard';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+  public userApi = inject(UserApiService);
+
   public tokens = en.tokens;
   public featureImage = 'assets/images/how-it-works.png';
+
   public cards: InstructionCard[] = [
     {
       image: 'assets/images/icons/magnifying-note.png',
@@ -35,6 +39,7 @@ export class HomeComponent {
         'Buy ingredients or ready-made pastes directly through our secure Shopify storefront.',
     },
   ];
+
   public recipes: RecipeCard[] = [
     {
       title: 'Authentic Thai Green Curry',
@@ -94,7 +99,13 @@ export class HomeComponent {
   public buttons: Button[] = [
     {
       text: 'Sign Up',
-      handler: () => {},
+      handler: () => {
+        this.userApi.signUp({ 
+          email: this.formGroup.value.email ?? '',
+        }).subscribe((res) => {
+          console.log(res);
+        });
+      },
       type: 'submit',
       disabled: false,
       reverse: false,

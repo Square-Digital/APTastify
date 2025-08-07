@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { ConfigurationService } from '../configuration/configuration.service';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +12,7 @@ export class BaseApiService {
     private http: HttpClient,
   ) {
     // Get the base URL from configuration
-    this.baseUrl = 
+    this.baseUrl = "http://aptastify-be-alb-43258974.us-east-2.elb.amazonaws.com/"
     console.log('Base URL:', this.baseUrl);
   }
 

@@ -15,6 +15,16 @@ export interface CreateUserRequest {
   password: string;
 }
 
+export interface SignupRequest {
+  email: string;
+}
+
+export interface UserSignup{
+  id: string;
+  email: string;
+  createdAt: Date;
+}
+
 export interface UpdateUserRequest {
   name?: string;
   email?: string;
@@ -59,5 +69,9 @@ export class UserApiService extends BaseApiService {
   // Update current user profile
   updateCurrentUser(userData: UpdateUserRequest): Observable<User> {
     return this.put<User>('/users/me', userData);
+  }
+
+  signUp(userData: SignupRequest): Observable<UserSignup> {
+    return this.post<UserSignup>('/user/signup', userData);
   }
 }
