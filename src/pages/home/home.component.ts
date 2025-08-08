@@ -104,23 +104,34 @@ export class HomeComponent {
     {
       text: 'Sign Up',
       handler: () => {
-        this.userApi.signUp({
-          email: this.formGroup.value.email ?? '',
-        }).subscribe({
-          next: (res) => {
-            this.popupService.show({
-              message: 'Thank you for signing up!',
-              type: 'success'
-            });
-          },
-          error: (err) => {
-            const errorMessage = err.error?.message || 'Failed to sign up. Please try again.';
-            this.popupService.show({
-              message: errorMessage,
-              type: 'error'
-            });
-          }
-        });
+        if (this.formGroup.value.email === '') {
+          this.popupService.show({
+            message: 'Please enter your email address.',
+            type: 'error',
+          });
+          return;
+        }
+
+        this.userApi
+          .signUp({
+            email: this.formGroup.value.email ?? '',
+          })
+          .subscribe({
+            next: (res) => {
+              this.popupService.show({
+                message: 'Thank you for signing up!',
+                type: 'success',
+              });
+            },
+            error: (err) => {
+              const errorMessage =
+                err.error?.message || 'Failed to sign up. Please try again.';
+              this.popupService.show({
+                message: errorMessage,
+                type: 'error',
+              });
+            },
+          });
       },
       type: 'submit',
       disabled: false,
