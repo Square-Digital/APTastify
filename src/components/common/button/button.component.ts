@@ -20,7 +20,6 @@ export class ButtonComponent {
   public onClick = output<void>();
 
   public handleClick = () => {
-    console.log("clicked");
     this.clickHandler()(); // Call the passed function
     this.onClick.emit(); // Emit the event to parent
   }

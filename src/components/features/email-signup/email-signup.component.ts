@@ -27,7 +27,6 @@ export class EmailSignupComponent implements OnInit {
   public secondaryClick = output<void>();
 
   public ngOnInit(): void {
-    console.log(this.formGroup());
   }
 
   // Methods
@@ -40,6 +39,5 @@ export class EmailSignupComponent implements OnInit {
   }
 
   constructor() {
-    console.log(this.buttons());
   }
 }

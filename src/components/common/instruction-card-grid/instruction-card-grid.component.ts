@@ -10,8 +10,7 @@ import { InstructionCard } from '../../../interfaces/instructionCard';
 export class InstructionCardGridComponent {
   public cards = input<InstructionCard[]>([]);
   public featureImage = input<string>("");
-  
+
   constructor() {
-    console.log(this.cards());
   }
 }

@@ -12,9 +12,7 @@ export class BaseApiService {
   constructor(
     private http: HttpClient,
   ) {
-    // Get the base URL from configuration
     this.baseUrl = environment.apiRoot;
-    console.log('Base URL:', this.baseUrl);
   }
 
   // GET request

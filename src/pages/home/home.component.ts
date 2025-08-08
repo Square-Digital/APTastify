@@ -156,7 +156,7 @@ export class HomeComponent {
       name: 'John Doe',
     },
   ];
+  
   public onFormSubmit(event: any): void {
-    console.log(event);
   }
 }
