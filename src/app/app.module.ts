@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PagesModule } from '../pages/pages.module';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonUiModule } from '../components/common/common-ui.module';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    PagesModule
+    PagesModule,
+    CommonUiModule
   ],
   providers: [
 

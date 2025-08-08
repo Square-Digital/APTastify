@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import en from '../../translations/en.json';
+import { PopupService } from '../../services/popup/popup.service';
 import { InstructionCard } from '../../interfaces/instructionCard';
 import { RecipeCard } from '../../interfaces/recipeCard';
 import { ProductCard } from '../../interfaces/productCard';
@@ -16,6 +17,7 @@ import { UserApiService } from '../../services/api/user/user-api.service';
 })
 export class HomeComponent {
   public userApi = inject(UserApiService);
+  private popupService = inject(PopupService);
 
   public tokens = en.tokens;
   public featureImage = 'assets/images/how-it-works.png';
@@ -104,8 +106,19 @@ export class HomeComponent {
       handler: () => {
         this.userApi.signUp({
           email: this.formGroup.value.email ?? '',
-        }).subscribe((res) => {
-          console.log(res);
+        }).subscribe({
+          next: (res) => {
+            this.popupService.show({
+              message: 'Thank you for signing up!',
+              type: 'success'
+            });
+          },
+          error: (err) => {
+            this.popupService.show({
+              message: 'Failed to sign up. Please try again.',
+              type: 'error'
+            });
+          }
         });
       },
       type: 'submit',

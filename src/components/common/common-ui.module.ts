@@ -13,6 +13,7 @@ import { RichTextComponent } from './rich-text/rich-text.component';
 import { InfoCardComponent } from './info-card/info-card.component';
 import { FooterComponent } from './footer/footer.component';
 import { IconButtonComponent } from './icon-button/icon-button.component';
+import { PopupComponent } from './popup/popup.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { IconButtonComponent } from './icon-button/icon-button.component';
     InfoCardComponent,
     FooterComponent,
     IconButtonComponent,
+    PopupComponent,
   ],
   imports: [
     CommonModule,
@@ -47,6 +49,7 @@ import { IconButtonComponent } from './icon-button/icon-button.component';
     InfoCardComponent,
     FooterComponent,
     IconButtonComponent,
+    PopupComponent,
   ]
 })
 export class CommonUiModule { }

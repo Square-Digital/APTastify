@@ -23,6 +23,7 @@ export class InputComponent implements ControlValueAccessor {
   public disabled = input<boolean>(false);
   public icon = input<string>('');
   public formControl = input<FormControl>(new FormControl(''));
+  public formControlName = input<string>('');
 
   // Outputs
   public valueChange = output<string>();
@@ -59,7 +60,7 @@ export class InputComponent implements ControlValueAccessor {
     if (this.formControl()) {
       this.formControl().setValue(value);
     }
-    
+
     this.onChange(value);
     this.valueChange.emit(value);
   }
