@@ -64,6 +64,7 @@
           border-radius: 10px;
           justify-content: center;
           align-items: center;
+
         }
       }
 
@@ -80,6 +81,9 @@
       padding: 1rem;
       list-style: none;
       margin: 0;
+      @media (max-width: $breakpoint-mobile) {
+        text-align: center;
+      }
 
       &__item {
         display: flex;
