@@ -1,4 +1,4 @@
-import { Component, input, output } from '@angular/core';
+import { Component, input, OnInit, output } from '@angular/core';
 import { Button } from '../../../interfaces/button';
 import { FormGroup } from '@angular/forms';
 import { Input } from '../../../interfaces/input';
@@ -10,7 +10,7 @@ import { FormDirection } from '../../forms/form/form.component';
   templateUrl: './email-signup.component.html',
   styleUrl: './email-signup.component.scss'
 })
-export class EmailSignupComponent {
+export class EmailSignupComponent implements OnInit {
   public backgroundImage = input<string>('');
   public title = input<string>('');
   public subtitle = input<string>('');
@@ -25,6 +25,10 @@ export class EmailSignupComponent {
   // Outputs
   public primaryClick = output<void>();
   public secondaryClick = output<void>();
+
+  public ngOnInit(): void {
+    console.log(this.formGroup());
+  }
 
   // Methods
   public onPrimaryClick(): void {

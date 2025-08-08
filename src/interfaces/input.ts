@@ -5,5 +5,6 @@ export interface Input {
   required: boolean;
   disabled: boolean;
   value: string;
-  icon?: string; // ← Add this
+  icon?: string;
+  formControlName: string;
 }

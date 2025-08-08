@@ -25,13 +25,18 @@ export class FormComponent {
 
   constructor() {
     console.log(this.buttons());
+    console.log(this.formGroup());
+    
+
   }
 
   public onSubmit(e: Event): void {
     e.preventDefault();
     const formGroup = this.formGroup();
     console.log(formGroup);
+
     if (formGroup && formGroup.valid) {
+      console.log(formGroup.value);
       this.formSubmit.emit(formGroup.value);
     }
   }

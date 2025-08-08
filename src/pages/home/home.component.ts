@@ -81,10 +81,11 @@ export class HomeComponent {
       cta: 'Get a Free Sample',
     },
   ];
+
   public formGroup = new FormGroup({
     email: new FormControl(''),
-    password: new FormControl(''),
   });
+
   public inputs: Input[] = [
     {
       placeholder: 'Your E-Mail Address',
@@ -93,6 +94,7 @@ export class HomeComponent {
       disabled: false,
       value: '',
       icon: 'assets/images/icons/mail.png',
+      formControlName: 'email',
     },
   ];
 
@@ -100,7 +102,7 @@ export class HomeComponent {
     {
       text: 'Sign Up',
       handler: () => {
-        this.userApi.signUp({ 
+        this.userApi.signUp({
           email: this.formGroup.value.email ?? '',
         }).subscribe((res) => {
           console.log(res);

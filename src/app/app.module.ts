@@ -18,12 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     PagesModule
   ],
   providers: [
-    {
-      provide: APP_INITIALIZER,
-      useFactory: initializeApp,
-      deps: [ConfigurationService],
-      multi: true
-    }
+
   ],
   bootstrap: [AppComponent]
 })
