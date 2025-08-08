@@ -10,6 +10,23 @@
   animation: fadeInScale 0.3s ease-out;
   min-width: 300px;
   text-align: center;
+  font-family: 'circular-book';
+
+  &__close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
 
   &.success {
     background-color: #4CAF50;

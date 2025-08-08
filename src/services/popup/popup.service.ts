@@ -16,15 +16,17 @@ export class PopupService {
   public type = signal<'success' | 'error' | 'info'>('info');
 
   show(config: PopupConfig): void {
-    console.log('Popup service show called:', config);
     this.message.set(config.message);
     this.type.set(config.type);
     this.isVisible.set(true);
-    console.log('Popup visibility set to:', this.isVisible());
 
     setTimeout(() => {
       this.hide();
     }, config.duration || this.defaultDuration);
+  }
+
+  close(): void {
+    this.isVisible.set(false);
   }
 
   hide(): void {

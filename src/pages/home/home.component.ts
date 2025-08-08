@@ -114,8 +114,10 @@ export class HomeComponent {
             });
           },
           error: (err) => {
+            // Extract message from error response
+            const errorMessage = err.error?.message || 'Failed to sign up. Please try again.';
             this.popupService.show({
-              message: 'Failed to sign up. Please try again.',
+              message: errorMessage,
               type: 'error'
             });
           }
