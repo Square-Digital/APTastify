@@ -1,4 +1,10 @@
-import { Component, inject } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  inject,
+  ViewChild,
+  AfterViewInit,
+} from '@angular/core';
 import en from '../../translations/en.json';
 import { PopupService } from '../../services/popup/popup.service';
 import { InstructionCard } from '../../interfaces/instructionCard';
@@ -16,6 +22,23 @@ import { UserApiService } from '../../services/api/user/user-api.service';
   styleUrl: './home.component.scss',
 })
 export class HomeComponent {
+  @ViewChild('emailSignupSection', { read: ElementRef })
+  emailSignupSection!: ElementRef<HTMLElement>;
+
+  public signup = () => {
+    if (this.emailSignupSection?.nativeElement) {
+      this.emailSignupSection.nativeElement.scrollIntoView({
+        behavior: 'smooth',
+      });
+    } else {
+      console.error('emailSignupSection not found');
+    }
+  };
+
+  public redirectToShopify = () => {
+    window.location.href = 'https://api-taste1.myshopify.com/password';
+  };
+
   public userApi = inject(UserApiService);
   private popupService = inject(PopupService);
 
@@ -69,23 +92,26 @@ export class HomeComponent {
       title: 'Mango Paste',
       image: 'assets/images/products/mango-paste.png',
       cta: 'Get a Free Sample',
+      action: () => this.redirectToShopify(),
     },
     {
       brand: 'SWTM',
       title: 'Pineapple Paste',
       image: 'assets/images/products/mango-paste.png',
       cta: 'Get a Free Sample',
+      action: () => this.redirectToShopify(),
     },
     {
       brand: 'SWTM',
       title: 'Mango Paste',
       image: 'assets/images/products/mango-paste.png',
       cta: 'Get a Free Sample',
+      action: () => this.redirectToShopify(),
     },
   ];
 
   public formGroup = new FormGroup({
-    email: new FormControl(''),
+    email: new FormControl({ value: '', disabled: false }),
   });
 
   public inputs: Input[] = [
@@ -156,7 +182,6 @@ export class HomeComponent {
       name: 'John Doe',
     },
   ];
-  
-  public onFormSubmit(event: any): void {
-  }
+
+  public onFormSubmit(event: any): void {}
 }

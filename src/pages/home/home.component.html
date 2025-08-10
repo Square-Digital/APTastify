@@ -1,5 +1,5 @@
 <div class="aptastify-home">
-  <aptastify-hero></aptastify-hero>
+  <aptastify-hero [signup]="signup" [redirectToShopify]="redirectToShopify" />
   <aptastify-instruction-card-grid
     [cards]="cards"
     [featureImage]="featureImage"
@@ -8,6 +8,7 @@
   <aptastify-product-card-grid [products]="products" />
   <aptastify-rich-text />
   <aptastify-email-signup
+    #emailSignupSection
     [title]="'Coming Soon:'"
     [subtitle]="'APTastify App'"
     [description]="

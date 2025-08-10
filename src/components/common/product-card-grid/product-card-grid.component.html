@@ -33,7 +33,7 @@
 
     <div class="aptastify-product-card-grid__content__cards" #cardsContainer>
       @for (product of products(); track product.title) {
-      <aptastify-product-card [product]="product" />
+      <aptastify-product-card [product]="product" (onClick)="product.action?.()"/>
       }
     </div>
   </div>

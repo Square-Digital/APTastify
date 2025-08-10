@@ -18,9 +18,9 @@ export class ProductCardGridComponent implements AfterViewInit {
   public description = input<string>("Join the global culinary revolution — where chefs, creators, and food lovers share, earn, and connect through inspiring recipes.");
 
   public scrollAnimationService = inject(ScrollAnimationService);
-  constructor() {}
 
   ngAfterViewInit() {
     this.scrollAnimationService.setupDefaultScrollAnimation(this.cardsContainer);
   }
+
 }

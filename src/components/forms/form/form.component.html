@@ -11,7 +11,6 @@
     [placeholder]="input.placeholder"
     [type]="input.type"
     [required]="input.required"
-    [disabled]="input.disabled"
     [icon]="input.icon ?? ''"
     [formControlName]="input.formControlName"
   />
@@ -23,7 +22,6 @@
       [text]="button.text"
       (onClick)="button.handler()"
       [type]="button.type ?? 'submit'"
-      [disabled]="button.disabled ?? false"
       [reverse]="button.reverse ?? false"
       [icon]="button.icon ?? ''"
       [iconPosition]="button.iconPosition ?? 'left'"

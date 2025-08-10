@@ -3,4 +3,5 @@ export interface ProductCard {
   title: string;
   image: string;
   cta: string;
+  action?: () => void;
 }

@@ -9,8 +9,8 @@
         {{tokens.pages.home.hero.cta}}
       </p>
       <div class="aptastify-hero__content__text__buttons">
-        <aptastify-button [text]="tokens.pages.home.hero.button.sample" />
-        <aptastify-button [text]="tokens.pages.home.hero.button.contribute" [reverse]="true" />
+        <aptastify-button [text]="tokens.pages.home.hero.button.sample" (onClick)="onRedirectToShopifyClick()"/>
+        <aptastify-button [text]="tokens.pages.home.hero.button.contribute" [reverse]="true" (onClick)="onSignupClick()"/>
       </div>
     </div>
     <div class="aptastify-hero__content__image">
@@ -18,5 +18,5 @@
     </div>
   </div>
     <aptastify-separation-bar [text]="tokens.pages.home.hero['separation-bar']" />
-  
+
 </div>
