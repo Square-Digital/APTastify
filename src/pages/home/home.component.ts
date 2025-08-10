@@ -138,16 +138,18 @@ export class HomeComponent {
           return;
         }
 
+        this.popupService.show({
+          message: 'Thank you for signing up!',
+          type: 'success',
+        });
+
         this.userApi
           .signUp({
             email: this.formGroup.value.email ?? '',
           })
           .subscribe({
             next: (res) => {
-              this.popupService.show({
-                message: 'Thank you for signing up!',
-                type: 'success',
-              });
+              // currently do nothing with the response
             },
             error: (err) => {
               const errorMessage =
