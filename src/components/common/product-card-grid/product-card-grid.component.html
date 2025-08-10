@@ -2,8 +2,12 @@
   <div class="aptastify-product-card-grid__content">
     <div class="aptastify-product-card-grid__content__top">
       <div class="aptastify-product-card-grid__content__top__text-container">
-        <div class="aptastify-product-card-grid__content__top__text-container__text">
-          <div class="aptastify-product-card-grid__content__top__text-container__text__title-row">
+        <div
+          class="aptastify-product-card-grid__content__top__text-container__text"
+        >
+          <div
+            class="aptastify-product-card-grid__content__top__text-container__text__title-row"
+          >
             <h1>{{ title() }}</h1>
           </div>
           <div
@@ -12,16 +16,22 @@
             <p>{{ description() }}</p>
           </div>
         </div>
-        <div class="aptastify-product-card-grid__content__top__text-container__image">
-          <div class="aptastify-product-card-grid__content__top__text-container__image__arrow">
-            <img src="assets/images/arrow-top.png" alt="product-card-grid-image" />
+        <div
+          class="aptastify-product-card-grid__content__top__text-container__image"
+        >
+          <div
+            class="aptastify-product-card-grid__content__top__text-container__image__arrow"
+          >
+            <img
+              src="assets/images/arrow-top.png"
+              alt="product-card-grid-image"
+            />
           </div>
         </div>
       </div>
-
     </div>
 
-    <div class="aptastify-product-card-grid__content__cards">
+    <div class="aptastify-product-card-grid__content__cards" #cardsContainer>
       @for (product of products(); track product.title) {
       <aptastify-product-card [product]="product" />
       }
