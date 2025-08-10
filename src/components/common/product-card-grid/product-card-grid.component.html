@@ -1,19 +1,24 @@
 <div class="aptastify-product-card-grid">
   <div class="aptastify-product-card-grid__content">
     <div class="aptastify-product-card-grid__content__top">
-      <div class="aptastify-product-card-grid__content__top__text">
-        <div class="aptastify-product-card-grid__content__top__text__title-row">
-          <h1>{{ title() }}</h1>
+      <div class="aptastify-product-card-grid__content__top__text-container">
+        <div class="aptastify-product-card-grid__content__top__text-container__text">
+          <div class="aptastify-product-card-grid__content__top__text-container__text__title-row">
+            <h1>{{ title() }}</h1>
+          </div>
+          <div
+            class="aptastify-product-card-grid__content__top__text-container__text__description"
+          >
+            <p>{{ description() }}</p>
+          </div>
         </div>
-        <div
-          class="aptastify-product-card-grid__content__top__text__description"
-        >
-          <p>{{ description() }}</p>
+        <div class="aptastify-product-card-grid__content__top__text-container__image">
+          <div class="aptastify-product-card-grid__content__top__text-container__image__arrow">
+            <img src="assets/images/arrow-top.png" alt="product-card-grid-image" />
+          </div>
         </div>
       </div>
-      <div class="aptastify-product-card-grid__content__top__image">
-        <img src="assets/images/arrow-top.png" alt="product-card-grid-image" />
-      </div>
+
     </div>
 
     <div class="aptastify-product-card-grid__content__cards">
