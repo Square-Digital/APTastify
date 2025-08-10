@@ -18,6 +18,12 @@
     font-weight: 600;
     color: var(--secondary);
 
+    @media (max-width: $breakpoint-tablet) {
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+
     h2 {
       margin: 0;
     }
