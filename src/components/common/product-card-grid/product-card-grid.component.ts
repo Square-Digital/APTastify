@@ -1,5 +1,6 @@
-import { AfterViewInit, Component, ElementRef, input, ViewChild, ViewChildren } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, inject, input, ViewChild, ViewChildren } from '@angular/core';
 import { ProductCard } from '../../../interfaces/productCard';
+import { ScrollAnimationService } from '../../../services/scroll-animation/scroll-animation.service';
 
 @Component({
   selector: 'aptastify-product-card-grid',
@@ -16,24 +17,10 @@ export class ProductCardGridComponent implements AfterViewInit {
   public title = input<string>('Free Paste Sample With Sign Up');
   public description = input<string>("Join the global culinary revolution — where chefs, creators, and food lovers share, earn, and connect through inspiring recipes.");
 
+  public scrollAnimationService = inject(ScrollAnimationService);
+  constructor() {}
+
   ngAfterViewInit() {
-    this.setupScrollAnimation();
-  }
-
-  private setupScrollAnimation() {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-in');
-        }
-      });
-    }, {
-      threshold: 0.1, // Trigger when 10% of the element is visible
-      rootMargin: '0px 0px -50px 0px' // Start animation slightly before element is fully in view
-    });
-
-    if (this.cardsContainer?.nativeElement) {
-      observer.observe(this.cardsContainer.nativeElement);
-    }
+    this.scrollAnimationService.setupDefaultScrollAnimation(this.cardsContainer);
   }
 }
