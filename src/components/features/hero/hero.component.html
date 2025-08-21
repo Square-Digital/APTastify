@@ -1,10 +1,28 @@
 <div class="aptastify-hero">
   <div class="aptastify-hero__content">
     <div class="aptastify-hero__content__text">
-      <aptastify-logo />
-      <h1 class="aptastify-hero__content__text__title">
-        {{ tokens.components.hero.title }}
-      </h1>
+      <div class="aptastify-hero__content__text__main">
+        <aptastify-logo />
+        <div class="aptastify-hero__content__text__main__content">
+          <p class="aptastify-hero__content__text__main__content__cta">
+            {{ tokens.pages.home.hero.cta }}
+          </p>
+          <div class="aptastify-hero__content__text__main__content__buttons">
+            <aptastify-button
+              [text]="tokens.pages.home.hero.button.sample"
+              (onClick)="onRedirectToShopifyClick()"
+            />
+            <aptastify-button
+              [text]="tokens.pages.home.hero.button.contribute"
+              [reverse]="true"
+              (onClick)="onSignupClick()"
+            />
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- <aptastify-logo />
       <p class="aptastify-hero__content__text__cta">
         {{tokens.pages.home.hero.cta}}
       </p>
@@ -12,11 +30,10 @@
         <aptastify-button [text]="tokens.pages.home.hero.button.sample" (onClick)="onRedirectToShopifyClick()"/>
         <aptastify-button [text]="tokens.pages.home.hero.button.contribute" [reverse]="true" (onClick)="onSignupClick()"/>
       </div>
-    </div>
+    </div> -->
     <div class="aptastify-hero__content__image">
       <img src="/assets/images/phone-img.png" alt="Hero Image" />
     </div>
   </div>
-    <aptastify-separation-bar [text]="tokens.pages.home.hero['separation-bar']" />
-
+  <aptastify-separation-bar [text]="tokens.pages.home.hero['separation-bar']" />
 </div>

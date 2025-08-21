@@ -3,7 +3,6 @@ import {
   ElementRef,
   inject,
   ViewChild,
-  AfterViewInit,
 } from '@angular/core';
 import en from '../../translations/en.json';
 import { PopupService } from '../../services/popup/popup.service';

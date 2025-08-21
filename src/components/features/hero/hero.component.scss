@@ -17,7 +17,7 @@
   @media (max-width: $breakpoint-tablet) {
     padding-top: 50px;
     padding-bottom: 50px;
-    margin-top:100px;
+    margin-top: 100px;
   }
 
   &__content {
@@ -38,6 +38,58 @@
       gap: 1rem;
       width: auto;
       height: 100%;
+
+      &__main {
+        display: flex;
+        flex-direction: column;
+        max-width: 400px;
+        height: 60%;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: $breakpoint-tablet) {
+          height: 100%;
+        }
+
+        &__content {
+          max-width: 400px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          &__title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            max-width: 400px;
+            padding: 12px;
+
+            @media (max-width: $breakpoint-tablet) {
+              width: 80%;
+            }
+          }
+
+          &__cta {
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            font-weight: normal;
+            color: var(--grey);
+            font-family: "circular-book";
+            width: 400px;
+          }
+
+          &__buttons {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+
+            @media (max-width: $breakpoint-mobile) {
+              padding: 0px 12px;
+            }
+          }
+        }
+      }
 
       @media (max-width: $breakpoint-tablet) {
         width: 100%;
