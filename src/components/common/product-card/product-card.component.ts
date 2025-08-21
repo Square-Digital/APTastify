@@ -10,6 +10,7 @@ import { ProductCard } from '../../../interfaces/productCard';
 
 export class ProductCardComponent {
   public product = input<ProductCard>();
+  public number = input<number>();
 
   public click = () => {
     this.product()?.action?.();

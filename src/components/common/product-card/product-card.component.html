@@ -2,11 +2,26 @@
   <div class="aptastify-product-card__image">
     <img [src]="product()?.image" alt="product-card-image" />
   </div>
-  <div class="aptastify-product-card__text">
-    <h1 class="aptastify-product-card__text__brand">{{ product()?.brand }}</h1>
-    <h1 class="aptastify-product-card__text__title">{{ product()?.title }}</h1>
-  </div>
-  <div>
-    <aptastify-button [text]="product()?.cta || 'Learn More'" [reverse]="true" (onClick)="click()"/>
+
+  <div class="aptastify-product-card__content">
+    <div class="aptastify-product-card__content__text">
+      <div class="aptastify-product-card__content__text__number">
+        {{ number() }}
+      </div>
+        <h1 class="aptastify-product-card__content__text__brand">
+          {{ product()?.brand }}
+        </h1>
+        <h1 class="aptastify-product-card__content__text__title">
+          {{ product()?.title }}
+        </h1>
+
+      <div>
+        <aptastify-button
+          [text]="product()?.cta || 'Learn More'"
+          [reverse]="true"
+          (onClick)="click()"
+        />
+      </div>
+    </div>
   </div>
 </div>
