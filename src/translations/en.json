@@ -4,6 +4,10 @@
       "hero":{
         "title": "Made by The People For The People",
         "description": "Find the perfect recipe for any occasion."
+      },
+      "recipeCardGrid":{
+        "title": "Featured Recipes",
+        "button": "View more recipes from users at APRecipeLab"
       }
     },
     "pages":{
