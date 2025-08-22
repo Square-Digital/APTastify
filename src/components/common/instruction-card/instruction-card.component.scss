@@ -6,10 +6,33 @@
   height: 100%;
   max-width: 350px;
   gap: 1rem;
-  //justify-content: center;
-  //font-family: "circular-bold";
 
   &__icon-img {
+    position: relative;
+
+    &__letter {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      pointer-events: none;
+      top: 80%;
+      transform: translate(-50%, -50%);
+      font-size: 5rem;
+      font-weight: 600;
+      font-family: "circular-bold";
+      color: black;
+
+      @media (max-width: $breakpoint-mobile) {
+        display: none;
+      }
+    }
+
+    &__img {
+      position: relative;
+    }
+
     @media (max-width: $breakpoint-mobile) {
       display: flex;
       justify-content: center;

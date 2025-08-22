@@ -1,6 +1,9 @@
 <div class="aptastify-instruction-card">
   <div class="aptastify-instruction-card__icon-img">
-    <img [src]="image()" />
+    <div class="aptastify-instruction-card__icon-img__letter">
+      {{ letter() }}
+    </div>
+    <img [src]="image()" class="aptastify-instruction-card__icon-img__img" />
   </div>
   <div class="aptastify-instruction-card__title">
     <h2>{{ title() }}</h2>

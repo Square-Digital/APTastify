@@ -47,20 +47,30 @@ export class HomeComponent {
   public cards: InstructionCard[] = [
     {
       image: 'assets/images/icons/magnifying-note.png',
-      title: 'Create or Discover',
-      content: 'Browse recipes or upload your own signature recipes with ease.',
+      title: 'Generate',
+      content: 'Create and share your favorite recipes with the community.',
+      letter: 'G',
     },
     {
       image: 'assets/images/icons/magnifying-note.png',
-      title: 'Share and Earn',
+      title: 'Incentive',
       content:
-        'Distribute free samples, earn referral commissions, and build your recipe reputation.',
+        'Get rewards for contributing recipes, reviews, and tips.',
+      letter: 'I',
     },
     {
       image: 'assets/images/icons/magnifying-note.png',
-      title: 'Order and Enjoy',
+      title: 'Value',
       content:
-        'Buy ingredients or ready-made pastes directly through our secure Shopify storefront.',
+        'Provide delicious, practical, and inspiring recipes that everyone can enjoy.',
+      letter: 'V',
+    },
+    {
+      image: 'assets/images/icons/magnifying-note.png',
+      title: 'Earn',
+      content:
+        'Turn your culinary creativity into points, discounts, or exclusive perks.',
+      letter: 'E',
     },
   ];
 

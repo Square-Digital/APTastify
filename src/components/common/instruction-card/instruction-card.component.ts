@@ -10,4 +10,5 @@ export class InstructionCardComponent {
   public image = input<string>("");
   public title = input<string>("");
   public content = input<string>("");
+  public letter = input<string>("");
 }
