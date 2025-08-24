@@ -2,12 +2,14 @@
   <div class="aptastify-separation-bar__text">
     <p class="aptastify-separation-bar__text__text">{{ text() }}</p>
     <div class="aptastify-separation-bar__text__logos">
-      <!--Placeholder for logos, we will make this dynamic and loop-->
-      <aptastify-logo [height]="50" [width]="100" [background]="true" />
-      <aptastify-logo [height]="50" [width]="100" [background]="true" />
-      <aptastify-logo [height]="50" [width]="100" [background]="true" />
-      <aptastify-logo [height]="50" [width]="100" [background]="true" />
-      <aptastify-logo [height]="50" [width]="100" [background]="true" />
+      @for (logo of logos; track logo) {
+      <aptastify-logo
+        [height]="50"
+        [width]="50"
+        [background]="true"
+        [logo]="logo"
+      />
+      }
     </div>
   </div>
 </div>
